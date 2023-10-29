@@ -1,0 +1,204 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<div class="ok">
+    <nav class="navbar" style="background-color:black">
+        <img src="../assets/capture.png" alt="mouna" height="1%" width="10%"/>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a href="#classee">Features</a>
+                <a class="nav-item nav-link" href= "#h1">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            </div>
+        </div>
+    </nav>
+    <div class="marwen" style="width: 100%;background-color: black; color: beige;padding-bottom: 6%;padding-top: -6%;">
+        <div class="p" style="background-color: black; margin-left: 18%;margin-right: 20%;padding-bottom: 5%;">
+            <div id="classee" style="display: flex;">
+                <div class="parag" style="width: 65%;">
+                    <p
+                        style="background: linear-gradient(122.13deg, rgb(0, 177, 255) 0%, rgb(255, 255, 255) 100%);
+                        background-clip: border-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;font-size: 32px;font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-top: 5%;">
+                        Intonationsmanipulation online
+                    <p><br>
+                    <p style="width: 100%;font-size: 21px;">Verwenden Sie diesen assistierten Online-Intonationsmanipulation, um Ihre Stimme in Fragestellungen, Aussagen, Ausrufungen und vielem mehr für YouTube-Videos, Gameplay-Aufnahmen, Voice-Overs oder Podcasts zu verändern oder anzupassen.</p>
+                </div>
+                <div class="img">
+                    <img src="..\assets\voix.jpg" alt="moun" height="80%"
+                        style="margin-left: 8%; width: 90%;margin-top: 6%;border-radius: 1em;" />
+                </div>
+            </div>
+            <div class="color"
+                style="background-color: black;padding-bottom:7%;margin-top: 0%;border-radius: 1em;border-style: dashed;border-color: rgb(160, 13, 179);width: 100%;">
+                <p style="padding-left: 26%;width: 75%;font-size: 22px;text-align: center;padding-top: 5%;">Ziehen Sie eine Audiodatei hierhin, um sie zu übertragen, oder klicken Sie auf die Schaltfläche, um sie hochzuladen.</p>
+                <div class="row">
+                    <div class="col-md-5">
+                        <form>
+                            <div class="form-group">
+                                <label class="custom-file-upload"><i class="fa fa-download fa-2xs"></i>
+                                    Open Wav
+                                    <input class="btn-upload" #singleInput type="file" accept="audio/wav, audio/wave"
+                                        (change)="onFileSelected($event)"
+                                        style="display: none;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                </label>
+                            </div>
+                        </form>
+                        <p
+                            style="margin-left: 72%;font-size: 18px;font-family: Arial, Helvetica, sans-serif;margin-top: 8%;width: 100%;text-align: center;">
+                            Unterstützte Dateiformate : WAV <br>        
+                            Maximale Dateilänge : 3 min <br>
+                            Maximale Dateigröße : 100 Mo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+        <div class="adress" style="background-color: black;margin-bottom: 6%;margin-left: 10%;margin-right: 10%;">
+            <h1 id="h1" style="margin-top: -3%; text-align: center;background: linear-gradient(122.13deg, rgb(0, 177, 255) 0%, rgb(255, 255, 255) 100%);
+            background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">An wen richtet sich das Intonationsmanipulation ?</h1>
+            <div class="contain" style="display:flex;margin-top: 8%;">
+                <div class="img1" style="margin-left: 2%;">
+                    <img src="assets/homme.jpg" alt="mouna" width="80%" height="55%" style="background-size: cover;background-position: center center;
+                   
+                    display: inline-block;
+                    position: relative;border-radius: 36px 36px 0px 0px;" />
+                    <p style="margin-top: 4%;font-size: 30px;font-weight: bold;">Professioneller Benutzer</p>
+                    <hr>
+                    <p style="width: 80%;font-size: 20px;">Ob Sie in Bereichen wie Online-Schulung, automatisierten Telefondiensten oder audiovisueller Produktion arbeiten, können Sie unsere Website kostenlos zur Intonationsmanipulation verwenden.</p>
+                </div>
+                <div class="img2">
+                    <p style="margin-top: 4%;font-size: 30px;font-weight: bold;">Normaler Benutzer</p>
+                    <hr>
+                    <p style="width: 80%;font-size: 20px;">Ob Sie YouTuber, Streamer, Vlogger, Podcaster sind oder einfach nur Ihre Stimme zum Vergnügen verändern möchten, verwenden Sie das Online-Intonationsmanipulation, um den Klang Ihrer Stimme sofort anzupassen.</p>
+                    <img src="../assets/fille.jpg" width="80%" height="55%" alt="mouna" style="background-size: cover;background-position: center center;
+                  
+                    display: inline-block;
+                    position: relative;border-radius: 36px 36px 0px 0px;" />
+                </div>
+                <div class="img3">
+                    <img src="assets/femme.jpg" alt="mouna" width="80%" height="55%" style="background-size: cover;background-position: center center;
+                   
+                    display: inline-block;
+                    position: relative;border-radius: 36px 36px 0px 0px;" />
+                    <p style="margin-top: 4%;font-size: 30px;font-weight: bold;">Studenten und Schüler</p>
+                    <hr>
+                    <p style="width: 80%;font-size: 20px;">Wenn Sie Student oder Schüler sind und mehr über Stimme und Intonationsänderung lernen möchten, sind Sie hier genau richtig. Unsere Website bietet Ihnen eine transparente Intonationsmanipulation.</p>
+                </div>
+            </div>
+            <div class="comment" style="margin-right:5%;width: 100%;margin-top: 10%;padding-bottom: 10%;background-image: linear-gradient(122.13deg, rgb(115, 86, 229) 0%, rgb(64, 188, 242) 100%);
+            border-radius: 32px;">
+                <div class="h2">
+                    <h1 style="padding-top: 4%; text-align: center;">Wie kann man die Intonation seiner Stimme kostenlos online ändern?</h1>
+                </div>
+                <div class="etapes" style="display: flex;margin-top: 5%;margin-left: 4%;">
+                    <div class="etape1" style="width: 25%;padding-bottom: 1%; background-image: linear-gradient(164.28deg, rgba(28, 17, 82, 0.498) 0%, rgba(7, 2, 30, 0.275) 100%);
+                    border-radius: 16px;margin-left: 5%;">
+                        <img src="assets/ic_upload.png" width="20%" style="margin-left: 40%;margin-top: 2%;" />
+                        <h4>schritt 1</h4>
+                        <h3>Audiodatei auf unserer Plattform hochladen</h3>
+                        <p style="font-size: 1.3rem;width: 90%;margin-left: 5%;font-weight: 450;">Wählen Sie eine Audiodatei aus und laden Sie sie auf unsere Website hoch. Stellen Sie sicher, dass die Dateigröße weniger als 100 MB beträgt oder die Dauer nicht länger als 3 Minuten ist.</p>
+                    </div>
+                    <div class="etape2" style="width: 25%;padding-bottom: 1%; background-image: linear-gradient(164.28deg, rgba(28, 17, 82, 0.498) 0%, rgba(7, 2, 30, 0.275) 100%);
+                    border-radius: 16px;
+                   ;margin-left: 5%;">
+                        <img src="assets/ic_upload.png" width="20%" style="margin-left: 40%;margin-top: 2%;" />
+                        <h4>schritt 2</h4>
+                        <h3>Wählen Sie Ihre Art zu bearbeiten</h3>
+                        <p style="font-size: 1.3rem;width: 90%;margin-left: 5%;font-weight: 450;">Wählen Sie entweder die Option 'Auto-Pac' für den vollautomatischen Modus oder fügen Sie eine PAC-Datei ein, die Ihrer Sounddatei entspricht. Was ist eine PAC-Datei? Die Antwort finden Sie unten im FAQ-Bereich.</p>
+                    </div>
+                    <div class="etape3" style="width: 25%;padding-bottom: 1%; background-image: linear-gradient(164.28deg, rgba(28, 17, 82, 0.498) 0%, rgba(7, 2, 30, 0.275) 100%);
+                    border-radius: 16px;
+                  ;margin-left: 5%;">
+                        <img src="assets/ic_ai.png" width="20%" style="margin-left: 40%;margin-top: 2%;" />
+
+                        <h4>schritt 3</h4>
+                        <h3>Intonationsmanipulation</h3>
+                        <p style="font-size: 1.3rem;width: 90%;margin-left: 5%;font-weight: 450;">Sie werden auf eine Seite geleitet, die Ihnen alle Werkzeuge zur Intonationsmanipulation und zum Herunterladen des neuen Klangs bereitstellt.</p>
+                    </div>
+                </div>
+            </div>
+            <h1 style="margin-top: 10%; text-align: center;background: linear-gradient(122.13deg, rgb(0, 177, 255) 0%, rgb(255, 255, 255) 100%);
+            background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;font-weight: bolder;">Warum den Intonationsmodifikator von Fujisoft verwenden?</h1>
+            <div class="quest"
+                style="display: flex;margin-top: 5%;margin-left:8%;justify-content: space-between;padding-bottom: 4%;">
+                <div class="1">
+                    
+                    <h2 style="width: 80%;color: white;">Intonationsänderung in Echtzeit</h2>
+                    <hr style="width: 80%;">
+                    <p style="font-size:20px;width: 80%">Sofortige Veränderung der Stimmintonation.</p>
+                </div>
+                <div class="2">
+                  
+                    <h2 style="width: 80%;color: white;"> Kostenloser Online-Intonationsänderer</h2>
+                    <hr style="width: 80%;">
+                    <p style="font-size:20px;width: 80%">Nutzung des Dienstes ohne Gebühren.</p>
+                </div>
+                <div class="3">
+                    
+                    <h2 style="width: 80%;color: white;">Benutzerfreundliche Plattform</h2>
+                    <hr style="width: 80%;">
+                    <p style="font-size:20px;width: 80%">Einfach zu bedienende Oberfläche.</p>
+                </div>
+
+            </div>
+            <div class="quest"
+                style="display: flex;margin-top: 5%;margin-left:8%;justify-content: space-between;margin-top: 0%;">
+                <div class="4">
+                    
+                    <h2 style="width: 80%;color: white;">Vielseitige Anwendungsmöglichkeiten</h2>
+                    <hr style="width: 80%;">
+                    <p style="font-size:20px;width: 80%">Geeignet für verschiedene Anwendungsbereiche.</p>
+                </div>
+                <div class="5">
+                   
+                    <h2 style="width: 80%;color: white;">Hochwertige Ergebnisse </h2>
+
+
+                    <hr style="width: 80%;">
+                    <p style="font-size:20px;width: 80%">Erzeugt hochwertige, professionelle Audioergebnisse.</p>
+                </div>
+                <div class="6">
+                    
+                    <h2 style="width: 80%;color: white;">Einfacher Datei-Upload</h2>
+                    <hr style="width: 80%;">
+                    <p style="font-size:20px;width: 80%"> Schnelles und unkompliziertes Hochladen von Audiodateien</p>
+                </div>
+
+            </div>
+            <div class="comment" style="margin-right:5%;width: 100%;margin-top: 10%;padding-bottom: 6%;background-image: linear-gradient(122.13deg, rgb(115, 86, 229) 0%, rgb(64, 188, 242) 100%);
+        border-radius: 32px;">
+                <div class="h2">
+                    <h1 style="padding-top: 4%; width: 50%;margin-left: 20%;">Die häufigsten Fragen.(FAQ)</h1>
+                </div>
+                <div class="tr">
+                    <div *ngFor="let u of faqItems">
+                        <h3 style="margin-right: 2%;"> {{u.question}} </h3>
+                        <p style="font-size: 20px;">{{u.answer}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="lkool" style="background-color: black;padding-top: 2%;padding-bottom: 2%;margin-bottom: 1px;">
+        <div class="footer">
+        </div>
+        <div>
+            <p style="text-align: center; margin-top: 1.5%;font-size: 18px;color: white;">© Copyright 2023 Groupe Fujisoft. Alle Rechte vorbehalten. <span style="margin-left: 5%;font-size: 18px;"> Vertraulichkeit</span> <span
+                    style="margin-left: 5%;font-size: 18px;">Nutzungsbedingungen</span></p>
+        </div>
+        <div class="footer">
+        </div>
+</div>

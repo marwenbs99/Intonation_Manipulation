@@ -1,0 +1,210 @@
+<ng-template #content let-modal>
+  
+  <div class="modal-header">
+  
+    <h5 class="modal-title f-w-600" id="exampleModalLabel">Auto PAC</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addFormMarque" class="needs-validation">
+      <div class="form">
+        <div class="form-group">
+          <label class="mb-1">Entry point</label>
+          <input formControlName="Entry" class="form-control" [(ngModel)]="EntryPoint" type="text">
+          <div *ngIf="addFormMarque.get('Entry')?.invalid && addFormMarque.get('Entry')?.touched">
+            <div *ngIf="addFormMarque.get('Entry')?.errors?.['required']">Le champ est requis.</div>
+            <div style="color: red;border: 1px solid red;"
+              *ngIf="addFormMarque.get('Entry')?.errors?.['min'] || addFormMarque.get('Entry')?.errors?.['max']">Value
+              most be between 0 et 5.</div>
+            <div style="color: red;border: 1px solid red;" *ngIf="addFormMarque.get('Entry')?.errors?.['pattern']">Wrong
+              Value</div>
+          </div>
+          <label class="mb-1">Exit Point</label>
+          <input formControlName="Exit" class="form-control" [(ngModel)]="ExistPoint" type="text">
+          <div *ngIf="addFormMarque.get('Exit')?.invalid && addFormMarque.get('Exit')?.touched">
+            <div *ngIf="addFormMarque.get('Exit')?.errors?.['required']">Le champ est requis.</div>
+            <div style="color: red;border: 1px solid red;"
+              *ngIf="addFormMarque.get('Exit')?.errors?.['min'] || addFormMarque.get('Exit')?.errors?.['max']">Value
+              most be between 0 et 5.</div>
+            <div style="color: red;border: 1px solid red;" *ngIf="addFormMarque.get('Exit')?.errors?.['pattern']">Wrong
+              Value</div>
+          </div>
+          <label class="mb-1">Error Threshold</label>
+          <input formControlName="Threshold" class="form-control" [(ngModel)]="Threshold" type="text">
+          <div *ngIf="addFormMarque.get('Threshold')?.invalid && addFormMarque.get('Threshold')?.touched"
+            class="error-message">
+            <div *ngIf="addFormMarque.get('Threshold')?.errors?.['required']">Value requied.</div>
+            <div *ngIf="addFormMarque.get('Threshold')?.errors?.['thresholdRange']">Value most be between 0.000001 et
+              0.00001.</div>
+          </div>
+          <label class="mb-1">Fb | auto</label>
+          <input formControlName="Fb" class="form-control" [(ngModel)]="Fb" type="text">
+          <div *ngIf="addFormMarque.get('Fb')?.invalid && addFormMarque.get('Fb')?.touched" class="error-message">
+            <div *ngIf="addFormMarque.get('Fb')?.errors?.['required']">Value required</div>
+            <div *ngIf="addFormMarque.get('Fb')?.errors?.['fbInvalid']">Value most be between 0.0 et 120.0 or 'auto' for
+              auto-detection</div>
+          </div>
+          <label class="mb-1">Alpha</label>
+          <input formControlName="Alpha" class="form-control" [(ngModel)]="Alpha" type="text">
+          <div *ngIf="addFormMarque.get('Alpha')?.invalid && addFormMarque.get('Alpha')?.touched">
+            <div *ngIf="addFormMarque.get('Alpha')?.errors?.['required']">Le champ est requis.</div>
+            <div style="color: red;border: 1px solid red;"
+              *ngIf="addFormMarque.get('Alpha')?.errors?.['min'] || addFormMarque.get('Alpha')?.errors?.['max']">Value
+              most be between 0 et 5.</div>
+            <div style="color: red;border: 1px solid red;" *ngIf="addFormMarque.get('Alpha')?.errors?.['pattern']">Wrong
+              Value</div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="addFormMarque.invalid" type="button" class="btn btn-primary"
+      (click)="autopacVerif();onSubmit();modal.dismiss('Cross click')">Save</button>
+    <button class="btn btn-secondary" type="button" data-dismiss="modal"
+      (click)="modal.dismiss('Cross click')">Close</button>
+  </div>
+</ng-template>
+
+
+
+
+
+
+
+
+<ng-template #content1 let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title f-w-600" id="exampleModalLabel"> TextGrid</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addFormMarque" class="needs-validation">
+      <div class="form">
+        <div class="form-group">
+          <div>
+            <label class="custom-file-upload">
+              Open TextGrid
+              <input class="btn-upload" #singleInput type="file" accept=".TextGrid"
+                (change)="onFileSelectedTextGrid($event);modal.dismiss('Cross click')" style="display: none;">
+            </label>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp; or
+          <div>
+            <button class="btn btn-primary" style="margin-top: 1%;" type="submit"
+              (click)="modal.dismiss('Cross click')">Auto-TextGrid</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+
+    <button class="btn btn-secondary" type="button" data-dismiss="modal"
+      (click)="modal.dismiss('Cross click')">Close</button>
+  </div>
+</ng-template>
+
+<div class="container-fluid" style="display: block;">
+  <div class="loading-container" *ngIf="loading">
+    <img src="..\assets\loding4.gif" alt="Loading..." />
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="logo" >
+    <img src="../assets/capturee.PNG" height="95" width="180" routerLink="/" style="cursor: pointer;padding-bottom: 2px;"/></div> 
+  <div class="gauche" style="float: left;width: 25%;margin-top: 10%;">
+    <div class="col">
+      <div class="col-md-5" style="margin-left: 75%;font-size: 18px;">
+        <form>
+          <div class="form-group" >
+            
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" style="font-size: 18px;font-weight: 400;margin-top: 4%;margin-bottom: 15%;" type="submit" [disabled]="!downloadFile"
+              (click)="downloadit()">Save Wav</button>
+            <label class="custom-file-upload">
+              Open PAC
+              <input [disabled]="!files" class="btn-upload" #singleInput type="file" accept=".PAC"
+                (change)="onFileSelectedPAC($event,content1)" style="display: none;">
+            </label>
+            <button class="btn btn-primary" style="font-size: 18px;font-weight: 400;margin-top: 3%;" [disabled]="!fbparam" (click)="savePAC()"
+              type="submit">Save PAC</button><br />
+            <button class="btn btn-primary" style="font-size: 18px;font-weight: 400;margin-top: 3%;" [disabled]="!files" type="submit"
+              (click)="open(content)">Auto PAC</button>
+            <button class="btn btn-primary" style="font-size: 18px;font-weight: 400;margin-top: 5em;" [disabled]="!fbparam" type="submit"
+              (click)="Resynthesis()">ReSynthesis</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    <div class="droite" style="max-width: 100%;">
+      
+    
+      <div class="col-md-4" style="margin-left: 37%;text-align: center;margin-top: 5px;font-size: px;">
+        <div class="btn-group" role="group">
+          
+          <button class="btn btn-primary" (click)="wavesurfer.play()">
+            <i class="fa fa-play"></i> Play
+          </button>
+          <button class="btn btn-primary" (click)="wavesurfer.pause()">
+            <i class="fa fa-pause"></i> Pause
+          </button>
+          <button class="btn btn-primary" (click)="wavesurfer.stop()">
+            <i class="fa fa-stop"></i> Stop
+          </button>
+          <button class="btn btn-primary" (click)="wavesurfer.seekTo(0)">
+            <i class="fa fa-backward"></i> Replay
+          </button>
+        </div>
+      </div>
+
+      <div class="lkol">
+        <div class="row">
+          <div class="col-md-8">
+            <div id="waveform" style="height: 150px;margin-left: 6%;width: 95%;"></div>
+          </div>
+        </div>
+
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div>
+                <img src="../assets/instruction.gif" alt="mouna" height="100%" width="100%" *ngIf="!fbparam" />
+                <canvas id="myChart3" style="width: 100%; height: 250px;"></canvas>
+                <canvas id="myChart2" style="width: 100%; height: 250px;"></canvas>
+                <div style="width: 70%; margin: 0 auto;" *ngIf="fbparam">
+                  <button class="btn btn-success" style="margin-left: 28%; margin-right: 2%;"
+                    (click)="addPointParametre()">Add</button>
+                  <button class="btn btn-danger" (click)="deleteLastParam()">delete last parametre</button>
+                </div>
+                <div class="chart-container">
+                  <canvas id="myChart" style="width: 100%; height: 150px;"></canvas>
+                </div>
+                <div style="width: 70%; margin: 0 auto;" *ngIf="fbparam">
+                 
+                  <div class="okk">
+                    
+                    <button class="btn btn-success" (click)="addPointParametre()"
+                    style="margin-left: 28%; margin-right: 2%;">Add</button>
+                    <button class="btn btn-danger" (click)="deleteLastPoint()">delete last
+                      parametre</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+
