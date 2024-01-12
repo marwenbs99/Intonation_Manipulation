@@ -13,7 +13,7 @@ diese Schritte:
 1-  Öffnen Sie das "soundX"-Projekt in Ihrem bevorzugten Code-Editor. 
 2-  Führen Sie im Terminal den folgenden Befehl aus: ng s 
 Konfiguration der Server 
-Der Ordner "server" enthält zwei Server, einen für die Datenbank (Node.js) und einen für die Back
+Der Ordner "server" enthält zwei Server, einen für die Aufnahme und Verwaltung von Sounddateien (Node.js) und einen für die Back
 End-Anwendung (Python). So starten Sie sie: 
 Node.js-Server: 
 1- Der Node.js-Server befindet sich direkt im Ordner "server". 
